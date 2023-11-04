@@ -57,8 +57,6 @@ def calculate_dti_ratio(csv_file, target_id):
     else:
         return None
 
-import csv
-
 # method to calculate FEDTI ratio returns true if less than or equal to 28%, false otherwise
 def calculate_frontend_dti_ratio(csv_file, target_id):
     # Initialize variables to store relevant information
@@ -82,8 +80,11 @@ def calculate_frontend_dti_ratio(csv_file, target_id):
     else:
         return None
 
+
+
+
 # Example usage of calculate_frontend_dti_ratio:
-csv_file = 'your_csv_file.csv'
+csv_file = 'fannieData.csv'
 target_id = 1  # Replace with the desired ID
 frontend_dti_result = calculate_frontend_dti_ratio(csv_file, target_id)
 
