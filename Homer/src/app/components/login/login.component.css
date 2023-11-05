@@ -37,8 +37,8 @@ svg {
 
 :host {
   position: relative;
-  width: 2197px;
-  height: 1245px;
+  width: 1512px;
+  height: 982px;
   flex-direction: column;
   align-items: flex-start;
   background-color: #f7f4f4;
@@ -49,63 +49,65 @@ svg {
   position: absolute;
   left: 0;
   top: 0;
-  width: 2219px;
-  height: 1270px;
+  width: 1512px;
+  height: 982px;
   flex-direction: column;
   align-items: flex-start;
   background-color: #fff;
   overflow: hidden;
   backdrop-filter: blur(5px);
 }
-.download1 {
+.homer1 {
   position: absolute;
-  left: 25px;
-  top: 41px;
-  width: 169px;
-  height: 164px;
-  background-image: url('/assets/download1.png');
+  left: 28px;
+  top: 17px;
+  width: 151px;
+  height: 223px;
+  background-image: url('/assets/homer1.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.greenTeam {
+.homer {
   color: #1c2183;
-  font-size: 90px;
+  font-size: 80px;
   line-height: 114.3391%;
   font-weight: bold;
   font-family: Amiri, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   position: absolute;
-  left: 235px;
-  top: 58px;
-  width: 479px;
-  height: 138px;
+  left: 191px;
+  top: 80px;
+  width: 283px;
+  height: 92px;
   justify-content: center;
   flex-direction: column;
 }
 .donTHaveAnAccountSignUpForgotY {
   position: absolute;
-  left: 828px;
-  top: 903px;
-  width: 642px;
-  height: 105px;
+  left: 570px;
+  top: 667px;
+  width: 411px;
+  height: 69px;
+  text-align: center;
+  align-items: center;
   flex-direction: column;
 }
 .labelWrapper {
-  font-size: 40px;
+  font-size: 26px;
   font-family: Amaranth, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   flex-shrink: 1;
 }
 .label {
   color: #000;
-  font-size: 40px;
+  font-size: 26px;
   font-family: Amaranth, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
 }
 .label2 {
   color: #000;
-  font-size: 40px;
+  font-size: 26px;
   font-family: Amaranth, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   text-decoration: underline;
@@ -114,29 +116,29 @@ svg {
   margin-top: 0;
 }
 .labelWrapper2 {
-  font-size: 40px;
+  font-size: 26px;
   font-family: Amaranth, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   flex-shrink: 1;
 }
 .label3 {
   color: #000;
-  font-size: 40px;
+  font-size: 26px;
   font-family: Amaranth, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   text-decoration: underline;
 }
 .welcomeBackSignIn {
   position: absolute;
-  left: 828px;
-  top: 235px;
-  width: 709px;
-  height: 136px;
+  left: 582px;
+  top: 224px;
+  width: 446px;
+  height: 107px;
   flex-direction: column;
 }
 .textBlock2 {
   color: #000;
-  font-size: 64px;
+  font-size: 43px;
   font-weight: bold;
   font-family: Amaranth, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
@@ -144,17 +146,17 @@ svg {
 .textBlock3 {
   margin-top: 0;
   color: #000;
-  font-size: 64px;
+  font-size: 43px;
   font-weight: bold;
   font-family: Amaranth, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
 }
 .frame2 {
   position: absolute;
-  left: 828px;
-  top: 440px;
-  width: 588px;
-  height: 76px;
+  left: 582px;
+  top: 362px;
+  width: 411px;
+  height: 66px;
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -164,20 +166,20 @@ svg {
 }
 .username {
   color: #000;
-  font-size: 40px;
+  font-size: 28px;
   font-family: Amaranth, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   z-index: 0;
-  width: 502px;
+  width: 388px;
   height: min-content;
   flex-direction: column;
 }
 .frame6 {
   position: absolute;
-  left: 828px;
-  top: 567px;
-  width: 588px;
-  height: 75px;
+  left: 582px;
+  top: 466px;
+  width: 411px;
+  height: 65px;
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -187,20 +189,20 @@ svg {
 }
 .password {
   color: #000;
-  font-size: 40px;
+  font-size: 28px;
   font-family: Amaranth, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   z-index: 0;
-  width: 502px;
+  width: 388px;
   height: min-content;
   flex-direction: column;
 }
 .frame8 {
   position: absolute;
-  left: 1003px;
-  top: 735px;
-  width: 238px;
-  height: 103px;
+  left: 716px;
+  top: 582px;
+  width: 142px;
+  height: 60px;
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -211,13 +213,13 @@ svg {
 }
 .login {
   color: #000;
-  font-size: 48px;
+  font-size: 27px;
   font-weight: bold;
   font-family: Amiri, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   z-index: 0;
-  width: 316px;
-  height: 44px;
+  width: 145px;
+  height: 22px;
   text-align: center;
   align-items: center;
   justify-content: center;
