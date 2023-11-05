@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router'; // Import the RouterModule
+import { AppComponent } from './app.component';
+import { ClLoginComponent } from './path-to-cl-login/cl-login.component';
 
-const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' }, // Redirect to login by default
-];
+
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  declarations: [
+    AppComponent,
+    ClLoginComponent, // Add ClLoginComponent to the declarations array
+  ],
+  imports: [
+    BrowserModule,
+    RouterModule, // Add RouterModule to the imports array
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppRoutingModule { }
+export class AppModule {}
