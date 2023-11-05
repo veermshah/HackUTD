@@ -4,7 +4,7 @@ import GPT as myGPT
 
 
 
-def insight_page():
+def main():
     st.title("Feedback Page")
     userID = st.number_input("Enter ID:", value=0, step=1, help="Enter your ID")
     suggestion = myGPT.getFeedbackbyID(userID)
