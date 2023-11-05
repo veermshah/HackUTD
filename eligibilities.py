@@ -3,29 +3,29 @@ import csv
 #method to calculate ltv ratio and return true if the value is less than 80% and false if not
 def calculate_ltv_ratio(csv_file, target_id):
     # Initialize variables to store relevant information
-    gross_monthly_income = None
     appraised_value = None
     down_payment = None
     loan_amount = None
 
     # Open the CSV file and search for the target ID
     with open(csv_file, 'r') as file:
-        reader = csv.DictReader(file, delimiter='\t')
+        reader = csv.DictReader(file, delimiter=',')
         for row in reader:
             if int(row['ID']) == target_id:
-                gross_monthly_income = float(row['GrossMonthlyIncome'])
                 appraised_value = float(row['AppraisedValue'])
                 down_payment = float(row['DownPayment'])
                 loan_amount = float(row['LoanAmount'])
                 break
 
     # Check if the target ID was found
-    if gross_monthly_income is not None and appraised_value is not None and down_payment is not None and loan_amount is not None:
+    if appraised_value is not None and down_payment is not None and loan_amount is not None:
         # Calculate the LTV ratio
         ltv_ratio = (loan_amount / appraised_value) * 100
-        return ltv_ratio <= 80
+        return ltv_ratio
     else:
         return None
+
+
 
 #method to calculate dti ratio using fannieData.csv, return a floating point value
 def calculate_dti_ratio(csv_file, target_id):
@@ -37,7 +37,7 @@ def calculate_dti_ratio(csv_file, target_id):
 
     # Open the CSV file and search for the target ID
     with open(csv_file, 'r') as file:
-        reader = csv.DictReader(file, delimiter='\t')
+        reader = csv.DictReader(file, delimiter=',')
         for row in reader:
             if int(row['ID']) == target_id:
                 gross_monthly_income = float(row['GrossMonthlyIncome'])
@@ -65,7 +65,7 @@ def calculate_frontend_dti_ratio(csv_file, target_id):
 
     # Open the CSV file and search for the target ID
     with open(csv_file, 'r') as file:
-        reader = csv.DictReader(file, delimiter='\t')
+        reader = csv.DictReader(file, delimiter=',')
         for row in reader:
             if int(row['ID']) == target_id:
                 gross_monthly_income = float(row['GrossMonthlyIncome'])
@@ -80,7 +80,50 @@ def calculate_frontend_dti_ratio(csv_file, target_id):
     else:
         return None
 
+import csv
 
+def calculate_high_low_pmi_with_credit_score(csv_file):
+    # Initialize variables to track the high and low PMI values
+    high_pmi = float('-inf')  # Initialize with negative infinity as the minimum
+    low_pmi = float('inf')  # Initialize with positive infinity as the maximum
+
+    # Read the CSV file
+    with open(csv_file, 'r') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            # Extract the relevant data from the CSV row
+            loan_amount = float(row['LoanAmount'])
+            appraised_value = float(row['AppraisedValue'])
+            down_payment = float(row['DownPayment'])
+            credit_score = int(row['CreditScore'])
+
+            # Calculate the Loan-to-Value (LTV) ratio
+            ltv = (loan_amount / appraised_value) * 100
+
+            # Determine the PMI rate based on credit score
+            if credit_score >= 740:
+                pmi_rate = 0.005  # Example: Excellent credit score
+            else:
+                pmi_rate = 0.02  # Example: Bad credit score
+
+            # Calculate PMI
+            pmi = (ltv - 80) / 100 * (loan_amount * pmi_rate / 12)
+            
+            # Update the high and low PMI values if necessary
+            high_pmi = max(high_pmi, pmi)
+            low_pmi = min(low_pmi, pmi)
+
+    # Return the high and low PMI values
+    return high_pmi, low_pmi
+
+
+# Example usage of pmi_calclulator: (PMI calculator is only to be used if LTV ratio is >80%)
+csv_file = 'fannieData.csv'
+high_pmi, low_pmi = calculate_high_low_pmi_with_credit_score(csv_file)
+
+# Print the high and low PMI values
+print(f"High PMI: ${high_pmi:.2f}")
+print(f"Low PMI: ${low_pmi:.2f}")
 
 
 # Example usage of calculate_frontend_dti_ratio:
@@ -99,7 +142,7 @@ else:
 
 
 # Example usage of calculate dti ratio:
-csv_file = 'your_csv_file.csv'
+csv_file = 'fannieData.csv'
 target_id = 1  # Replace with the desired ID
 dti_result = calculate_dti_ratio(csv_file, target_id)
 
@@ -108,16 +151,12 @@ if dti_result is not None:
 else:
     print(f"ID {target_id} not found in the CSV file.")
 
-
-# Example usage of calculate_ltv_ratio:
-csv_file = 'your_csv_file.csv'
+# Example usage of ltv_ratio:
+csv_file = 'fannieData.csv'
 target_id = 1  # Replace with the desired ID
 ltv_result = calculate_ltv_ratio(csv_file, target_id)
 
 if ltv_result is not None:
-    if ltv_result:
-        print(f"LTV Ratio for ID {target_id} is False (<= 80%).")
-    else:
-        print(f"LTV Ratio for ID {target_id} is True (> 80%).")
+    print(f"LTV Ratio for ID {target_id}: {ltv_result:.2f}%")
 else:
     print(f"ID {target_id} not found in the CSV file.")
