@@ -63,10 +63,33 @@ svg {
   top: 17px;
   width: 151px;
   height: 223px;
-  background-image: url('/assets/homer1.jpg');
+  background-image: url('/assets/homer1.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.frame9 {
+  position: absolute;
+  left: 568px;
+  top: 416px;
+  width: 411px;
+  height: 66px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 10px 10px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 6px;
+}
+.username {
+  color: #000;
+  font-size: 28px;
+  font-family: Arbutus Slab, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  z-index: 0;
+  width: 388px;
+  height: min-content;
+  flex-direction: column;
 }
 .homer {
   color: #1c2183;
@@ -83,103 +106,68 @@ svg {
   justify-content: center;
   flex-direction: column;
 }
-.donTHaveAnAccountSignUpForgotY {
+.welcomeRegisterYourAccount {
   position: absolute;
-  left: 570px;
-  top: 667px;
+  left: 582px;
+  top: 186px;
   width: 411px;
-  height: 69px;
-  text-align: center;
-  align-items: center;
+  height: 107px;
   flex-direction: column;
 }
+.textBlock {
+  color: #000;
+  font-size: 43px;
+  font-family: Arbutus Slab, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.textBlock2 {
+  margin-top: 0;
+}
 .labelWrapper {
-  font-size: 26px;
-  font-family: Amaranth, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+  font-size: 37px;
+  font-family: Arbutus Slab, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   flex-shrink: 1;
 }
 .label {
   color: #000;
-  font-size: 26px;
-  font-family: Amaranth, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+  font-size: 37px;
+  font-family: Arbutus Slab, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
 }
-.label2 {
-  color: #000;
-  font-size: 26px;
-  font-family: Amaranth, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  text-decoration: underline;
-}
-.textBlock {
-  margin-top: 0;
-}
-.labelWrapper2 {
-  font-size: 26px;
-  font-family: Amaranth, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  flex-shrink: 1;
-}
-.label3 {
-  color: #000;
-  font-size: 26px;
-  font-family: Amaranth, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  text-decoration: underline;
-}
-.welcomeBackSignIn {
+.frame8 {
   position: absolute;
-  left: 582px;
-  top: 224px;
-  width: 446px;
-  height: 107px;
-  flex-direction: column;
-}
-.textBlock2 {
-  color: #000;
-  font-size: 43px;
-  font-weight: bold;
-  font-family: Amaranth, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-}
-.textBlock3 {
-  margin-top: 0;
-  color: #000;
-  font-size: 43px;
-  font-weight: bold;
-  font-family: Amaranth, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-}
-.frame2 {
-  position: absolute;
-  left: 582px;
-  top: 362px;
-  width: 411px;
-  height: 66px;
+  left: 677px;
+  top: 735px;
+  width: 157px;
+  height: 61px;
   justify-content: center;
   align-items: center;
   padding: 10px;
-  outline: solid 1px #000;
-  outline-offset: -1px;
-  border-radius: 6px;
+  outline: solid 6px #1c2183;
+  outline-offset: -6px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px #00000040;
 }
-.username {
+.register {
   color: #000;
-  font-size: 28px;
-  font-family: Amaranth, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+  font-size: 27px;
+  font-family: Arbutus Slab, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   z-index: 0;
-  width: 388px;
-  height: min-content;
+  width: 145px;
+  height: 22px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
-.frame6 {
+.frame92 {
   position: absolute;
-  left: 582px;
-  top: 466px;
+  left: 568px;
+  top: 514px;
   width: 411px;
-  height: 65px;
+  height: 66px;
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -190,39 +178,56 @@ svg {
 .password {
   color: #000;
   font-size: 28px;
-  font-family: Amaranth, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+  font-family: Arbutus Slab, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   z-index: 0;
   width: 388px;
   height: min-content;
   flex-direction: column;
 }
-.frame8 {
+.frame6 {
   position: absolute;
-  left: 716px;
-  top: 582px;
-  width: 142px;
-  height: 60px;
+  left: 568px;
+  top: 618px;
+  width: 411px;
+  height: 65px;
   justify-content: center;
   align-items: center;
   padding: 10px;
-  outline: solid 6px #1c2183;
-  outline-offset: -6px;
-  border-radius: 20px;
-  box-shadow: 0px 4px 4px 0px #00000040;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 6px;
 }
-.login {
+.confirmPassword {
   color: #000;
-  font-size: 27px;
-  font-weight: bold;
-  font-family: Amiri, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+  font-size: 28px;
+  font-family: Arbutus Slab, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   z-index: 0;
-  width: 145px;
-  height: 22px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+  width: 388px;
+  height: min-content;
   flex-direction: column;
 }
-
+.frame10 {
+  position: absolute;
+  left: 568px;
+  top: 310px;
+  width: 411px;
+  height: 65px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 6px;
+}
+.iDNumber {
+  color: #000;
+  font-size: 28px;
+  font-family: Arbutus Slab, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  z-index: 0;
+  width: 388px;
+  height: min-content;
+  flex-direction: column;
+}
