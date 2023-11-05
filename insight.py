@@ -1,6 +1,6 @@
 import streamlit as st
 import login
-import GPT as myGPT
+import gpt as myGPT
 
 
 
